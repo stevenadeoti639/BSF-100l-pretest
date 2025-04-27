@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: url('images\ \(8\).jpeg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 50%;
+    max-width: 400px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    box-shadow: 0px 0px 10px gray;
+    border-radius: 10px;
+}
+span{
+    color: royalblue;
+}
+
+ input, button {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        box-sizing: border-box; /* Ensures padding doesn't affect width */
+    margin: 10px 0;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: darkblue;
+}
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.bg-transition {
+    position: absolute;
+    top: 0;
+    left: 100%; /* Start from right */
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: left 1s ease-in-out; /* Smooth transition */
+    z-index: -1;
+}
+
+/* Animate entry from right to left */
+.bg-transition:last-child {
+    left: 0;
+}
+.bg-transition {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    opacity: 0;
+}
+
+
+/* Entry Animations */
+.fade-in { animation: fadeIn 1s forwards; }
+.slide-in { animation: slideIn 1s forwards; }
+.zoom-in { animation: zoomIn 1s forwards; }
+
+/* Exit Animations */
+.fade-out { animation: fadeOut 1s forwards; }
+.slide-out { animation: slideOut 1s forwards; }
+.zoom-out { animation: zoomOut 1s forwards; }
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideOut {
+    from { transform: translateX(0); opacity: 1; }
+    to { transform: translateX(-100%); opacity: 0; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes zoomOut {
+    from { transform: scale(1); opacity: 1; }
+    to { transform: scale(0.5); opacity: 0; }
+}
+.logo-container {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    display: flex; /* Arrange logos side by side */
+    align-items: center; /* Align them vertically */
+    gap: 10px; /* Space between the logos */
+    z-index: 1000; /* Make sure it's always on top */
+}
+
+.logo {
+    width: 50px; /* Adjust size */
+    height: auto; /* Maintain aspect ratio */
+}
+.bg-transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 1.5s ease-in-out;
+}
