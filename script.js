@@ -1655,7 +1655,7 @@ function login() {
         localStorage.setItem("matricNumber", matricNumber);
         window.location.href = "subjects.html";
     } else {
-        alert("Invalid Matric Number! It must start with 'BSFC0'.");
+        alert("Invalid Matric Number! It must start with ''.");
     }
 }
 
